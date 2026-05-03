@@ -1,75 +1,47 @@
-export default function ZelaceSite() {
-  const cards = [
-    { title: "Temporadas", icon: "📅" },
-    { title: "Próximos Jogos", icon: "⚽" },
-    { title: "Rankings", icon: "📊" },
-    { title: "Jogadores", icon: "🃏" },
-  ];
-
-  return (
-    <div className="min-h-screen bg-zinc-950 text-white">
-      <header className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-700/30 via-cyan-500/20 to-zinc-950" />
-        <div className="relative mx-auto max-w-7xl px-6 py-20">
-          <div className="inline-block rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
-            Mbappá Championship
-          </div>
-          <h1 className="mt-5 text-6xl font-black tracking-tight md:text-8xl">ZELACE</h1>
-          <p className="mt-4 max-w-2xl text-lg text-zinc-300 md:text-xl">
-            Plataforma competitiva com identidade própria, temporadas organizadas e histórico de rivalidades.
-          </p>
-        </div>
-      </header>
-
-      <section className="border-y border-white/5 bg-gradient-to-r from-blue-600 to-cyan-400 py-5 text-center text-2xl font-medium text-zinc-950">
-        Zelace — Página Inicial
-      </section>
-
-      <main className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-10 lg:grid-cols-[280px_1fr]">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur">
-            <div className="flex h-48 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-700 to-cyan-400 text-6xl font-black">
-              ZMC
-            </div>
-          </div>
-
-          <div className="space-y-10">
-            <section className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur">
-              <h2 className="mb-4 text-3xl font-bold">O que é o Zelace?</h2>
-              <p className="leading-8 text-zinc-300">
-                A Zelace é o organizador oficial do Futzin do Mbappá Championship, reunindo temporadas,
-                rankings e a comunidade criada em torno do servidor. A proposta nasceu da evolução da cena
-                competitiva e consolidou um espaço próprio depois dos principais conflitos que marcaram a
-                formação da comunidade.
-              </p>
-            </section>
-
-            <section className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur">
-              <h2 className="mb-4 text-3xl font-bold">Futzin do Mbappá</h2>
-              <p className="leading-8 text-zinc-300">
-                O projeto surgiu no começo de 2023 pelas mãos de Filipe. O que começou como uma ideia interna
-                evoluiu para um cenário competitivo próprio, fortalecendo a comunidade e impulsionando a
-                criação de torneios que definiram uma nova fase em 2024, com organização mais sólida e identidade própria.
-              </p>
-            </section>
-          </div>
-        </div>
-
-        <section className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {cards.map((card) => (
-            <div
-              key={card.title}
-              className="group rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-white/10"
-            >
-              <div className="mb-5 text-6xl transition duration-300 group-hover:scale-105">{card.icon}</div>
-              <h3 className="text-lg font-semibold">{card.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-zinc-400">
-                Acesse rapidamente as principais informações da plataforma.
-              </p>
-            </div>
-          ))}
-        </section>
-      </main>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zelace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="badge">Mbappá Championship</span>
+      <h1>ZELACE</h1>
+      <p>Plataforma competitiva com temporadas, rankings e identidade própria.</p>
     </div>
-  );
-}
+  </header>
+
+  <section class="banner">Zelace — Página Inicial</section>
+
+  <main class="container main-grid">
+    <aside class="logo-card">
+      <div class="logo-box">ZMC</div>
+    </aside>
+
+    <section class="content">
+      <article class="card">
+        <h2>O que é o Zelace?</h2>
+        <p>A Zelace é o organizador oficial do Futzin do Mbappá Championship, reunindo temporadas, rankings e a comunidade criada em torno do servidor.</p>
+      </article>
+
+      <article class="card">
+        <h2>Futzin do Mbappá</h2>
+        <p>O projeto começou em 2023 e evoluiu para uma comunidade competitiva própria, consolidando uma nova fase em 2024.</p>
+      </article>
+    </section>
+  </main>
+
+  <section class="container cards-grid">
+    <div class="mini-card"><span>📅</span><h3>Temporadas</h3></div>
+    <div class="mini-card"><span>⚽</span><h3>Próximos Jogos</h3></div>
+    <div class="mini-card"><span>📊</span><h3>Rankings</h3></div>
+    <div class="mini-card"><span>🃏</span><h3>Jogadores</h3></div>
+  </section>
+</body>
+</html>
+
